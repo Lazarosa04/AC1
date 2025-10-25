@@ -1,14 +1,13 @@
 # Programa que implemente a expressão aritmética y = 2x - 8
-# Usar system calls para pedir valor ao user
-# E para imprimir o resultado
+# Usar system calls para pedir valor ao user e para imprimir o resultado
 
 # x : $t0
 # resultado (y) : $t1
 
 	.data
 	# função .eqv permite guardar valores
-	.eqv printInt,1		#string "printInt" passa a ser equivalente a 1
-	.eqv readInt,5		#string "readInt" passa a ser equivalente a 5
+	.eqv printInt,1		# string "printInt" passa a ser equivalente a 1
+	.eqv readInt,5		# string "readInt" passa a ser equivalente a 5
 	
 	.text
 	.globl main
@@ -25,4 +24,4 @@ main:	li $v0,readInt		# operação li (load immediate) de readInt (5)
 	move $a0,$t1		# o valor a imprimir ($a0) é o y ($t1)
 	syscall			# chamada ao syscall
 	
-	jr $ra			#fim do programa
+	jr $ra			# fim do programa
