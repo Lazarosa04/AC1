@@ -1,4 +1,4 @@
-# ler 2 numeros do user e imprimir o resultado
+# ler 2 numeros do user e imprimir o resultado da sua soma
 
 	.data
 str1:	.asciiz "Introduza dois números\n"
