@@ -8,7 +8,7 @@
 
 	.data
 str1:	.asciiz "Introduza um numero: "
-str2:	.asciiz "\nO valor em binario Ã©: "
+str2:	.asciiz "\nO valor em binario é: "
 
 	.eqv printString,4
 	.eqv printChar,11

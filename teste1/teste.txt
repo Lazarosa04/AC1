@@ -1,0 +1,83 @@
+void main(void)
+{
+    int num, i;
+    int order = -1;
+
+    num = read_int();
+    i = 0;
+    do {
+        if ((num & 1) == 1)
+            order = i;
+        num = num >> 1;
+        i++;
+    } while (i < 32);
+
+    if (order != -1)
+        print_int10(order);
+    else
+        print_string("No set bits\n");
+}
+
+Copie para o topo da área de resposta
+e preencha com os registos usados
+Mapa de registos
+num  :
+i    :
+order:
+Preencha o mapa de registos e codifique em Assembly do MIPS a função main().
+
+-----
+
+void main(void)
+{
+    static char str[] = "Teste-Pratico-1";
+    char cc;
+    char ms = str;
+
+    while (ms != '\0') {
+        cc = *ms;
+        if (cc < '0') {
+            ms = '';
+        } else {
+            if (cc >= 'a' && cc <= 'z') {
+                ms =ms - 0x20;
+            }
+        }
+        ms++;
+    }
+}
+
+Copie para o topo da área de resposta
+e preencha com os registos usados
+Mapa de registos
+cc :
+ms :
+
+-----
+
+#define SIZE 5
+
+void main(void)
+{
+    static int array[SIZE] = { 5, 27, 3, 11, 56 };
+    int i, max1, max2;
+
+    max1 = 1 << 31;
+    max2 = max1;
+
+    for (i = 0; i < SIZE; i++) {
+        if (array[i] > max1) {
+            max2 = max1;
+            max1 = array[i];
+        } else {
+            if (array[i] > max2 && array[i] < max1)
+                max2 = array[i];
+        }
+    }
+}
+Copie para o topo da área de resposta
+e preencha com os registos usados
+Mapa de registos
+i   :
+max1:
+max2:
